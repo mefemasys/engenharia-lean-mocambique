@@ -5,6 +5,7 @@
             <span class="font-bold text-xl tracking-tight">Engenharia Lean <span class="text-lean-blue">Moçambique</span></span>
         </a>
         
+        <!-- Menu Desktop -->
         <nav class="hidden md:flex space-x-8 items-center">
             <a href="<?php echo BASE_URL; ?>" class="hover:text-lean-blue transition">Início</a>
             <a href="<?php echo BASE_URL; ?>pages/sobre" class="hover:text-lean-blue transition">Sobre</a>
@@ -29,8 +30,35 @@
             </button>
         </nav>
         
-        <button class="md:hidden p-2">
-            <i data-lucide="menu" class="w-6 h-6"></i>
-        </button>
+        <!-- Botão Mobile -->
+        <div class="flex items-center md:hidden space-x-4">
+             <button id="theme-toggle-mobile" class="p-2 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">
+                <i data-lucide="sun" class="w-5 h-5 dark:block hidden"></i>
+                <i data-lucide="moon" class="w-5 h-5 dark:hidden block"></i>
+            </button>
+            <button id="mobile-menu-button" class="p-2 text-gray-600 dark:text-gray-300 focus:outline-none">
+                <i data-lucide="menu" id="menu-icon-open" class="w-6 h-6"></i>
+                <i data-lucide="x" id="menu-icon-close" class="w-6 h-6 hidden"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Menu Mobile Dropdown (Escondido por padrão) -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800">
+        <div class="px-4 pt-2 pb-6 space-y-2">
+            <a href="<?php echo BASE_URL; ?>" class="block px-3 py-2 rounded-md hover:bg-gray-50 dark:hover:bg-gray-800 transition">Início</a>
+            <a href="<?php echo BASE_URL; ?>pages/sobre" class="block px-3 py-2 rounded-md hover:bg-gray-50 dark:hover:bg-gray-800 transition">Sobre</a>
+            
+            <div class="space-y-1">
+                <p class="px-3 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider">Serviços</p>
+                <a href="<?php echo BASE_URL; ?>pages/consultoria" class="block px-3 py-2 pl-6 border-l-2 border-lean-blue hover:bg-gray-50 dark:hover:bg-gray-800">Consultoria</a>
+                <a href="<?php echo BASE_URL; ?>pages/formacao" class="block px-3 py-2 pl-6 border-l-2 border-lean-green hover:bg-gray-50 dark:hover:bg-gray-800">Formação</a>
+                <a href="<?php echo BASE_URL; ?>pages/gestao-processos" class="block px-3 py-2 pl-6 border-l-2 border-lean-orange hover:bg-gray-50 dark:hover:bg-gray-800">Gestão de Processos</a>
+                <a href="<?php echo BASE_URL; ?>pages/transformacao" class="block px-3 py-2 pl-6 border-l-2 border-lean-red hover:bg-gray-50 dark:hover:bg-gray-800">Transformação</a>
+                <a href="<?php echo BASE_URL; ?>pages/suporte" class="block px-3 py-2 pl-6 border-l-2 border-lean-cyan hover:bg-gray-50 dark:hover:bg-gray-800">Suporte e Mentoria</a>
+            </div>
+            
+            <a href="<?php echo BASE_URL; ?>pages/contacto" class="block px-3 py-2 rounded-md hover:bg-gray-50 dark:hover:bg-gray-800 transition">Contacto</a>
+        </div>
     </div>
 </header>
